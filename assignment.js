@@ -65,13 +65,18 @@ console.log('The animals are now', animalArray);
 
 // 4.b. TODO: Remove the food at the end of your array & 
 //      log both the food removed and the updated array
-
+let remove = favoriteFoods.pop()
+console.log('remove last food item', remove)
+console.log('updated food list:', favoriteFoods)
 
 // Example: Add an animal to the beginning using Array.unshift
 animalArray.unshift('walrus');
 console.log(`Added an animal to beginning: ${animalArray}`);
 
 // 4.c. TODO: Add a food at the beginning of the array & log the array
+favoriteFoods.unshift('curry')
+console.log('Unshifted food list:', favoriteFoods)
+console.log(`Unshifted food list: ${favoriteFoods}`)
 
 
 // Example: Remove the first animal using Array.shift
@@ -81,20 +86,37 @@ console.log('The animals are now', animalArray);
 
 // 4.d TODO: Remove the food at the beginning of your array & 
 //     log both the food removed and the updated array
+remove = favoriteFoods.shift()
+console.log('Remove the first food', remove)
+console.log('New food list:', favoriteFoods)
+
 
 // 4.e (STRETCH) TODO: Replace the second food in your array
 //      with another one of your favorite foods.
 //      Then log the updated array.
 
+console.log('Remove the second food', favoriteFoods.splice(1,1, 'tomatoes'))
+console.log('Newest food list', favoriteFoods)
+
+
 // 4.f (STRETCH) TODO: Sort your favoriteFoods array
 //     in reverse alphabetical order. Log the array.
+favoriteFoods.sort()
+console.log('Reverse Alphabetize', favoriteFoods.reverse())
 
 // 4.g (STRETCH) TODO: Convert your array to a string
 //     putting the word "and" between each item.
 //     eg "tacos and pizza and pasta". Log the string.
+
+console.log('string:', favoriteFoods.toString())
+console.log('adding and:', favoriteFoods.join(' and '))
 
 // 4.h (STRETCH) TODO: Make a new array that combines 
 //     the favorite foods array with the animals array.
 //     Then log the new array.
 //     It should look something like:
 //     ['pizza', 'pasta', 'fish', 'cat', 'bird', 'dog']
+
+let combination = favoriteFoods.concat(animalArray)
+
+console.log('combination:', combination)
